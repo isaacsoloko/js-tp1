@@ -72,7 +72,7 @@ Exercice 4
 */
 function annee_bissextile(){
     let annee = parseInt(prompt("Saisir l'année : ").trim());
-    exercice_description.textContent = "Exercice 04 :: LLa vérification de l'année " + annee + 
+    exercice_description.textContent = "Exercice 04 :: Vérification de l'année " + annee + 
     " si elle est bissextile";
     if (annee % 4 === 0 && annee % 100 !== 0) {
         result_container.textContent = "Oui c'est une année bissextile";
