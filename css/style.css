@@ -14,6 +14,11 @@ body{
     line-height: 2;
 }
 .container-btn{
+    width: 80%;
+    height: auto;
+    margin: auto;
+    overflow-x: scroll;
+    scrollbar-color: rebeccapurple green;
     display: flex;
     flex-direction: row;
     gap: 10px;

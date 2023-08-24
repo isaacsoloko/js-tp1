@@ -83,6 +83,33 @@ function annee_bissextile(){
 }
 
 /*
+Exercice 5
+@ Equation du second degré
+*/
+function equation_second_degre(){
+    let a, b, c, delta, x1, x2;
+    a = parseInt(prompt("Saisir la valeur de a : ").trim());
+    b = parseInt(prompt("Saisir la valeur de b : ").trim());
+    c = parseInt(prompt("Saisir la valeur de c : ").trim());
+    delta = Math.pow(b,2) - (4 * a * c);
+    if (delta === 0) {
+        x1 = x2 = -b / 2 * a;
+        result_container.innerHTML = "L'équation admet deux racines confondues : <br/>x1 = x2 = " + x1;
+    } else if (delta > 0) {
+        x1 = (-b + Math.sqrt(delta)) / 2 * a;
+        x2 = (-b - Math.sqrt(delta)) / 2 * a;
+        result_container.innerHTML = "L'équation admet deux racines distinctes : <br/>x1 = " + x1 + 
+        "<br/>x2 = " + x2;
+    }
+    else{
+        result_container.textContent = "Pas des racines réelles";
+    }
+    
+    exercice_description.innerHTML = "Résolution de l'équation du second degré avec : a = " 
+    + a + ", b = " + b + " et c = " + c;
+}
+
+/*
 Exercice 6
 @Valeur comprise entre 1 et 3
 */
@@ -185,6 +212,7 @@ let btn_ex2a = document.getElementById("ex2a");
 let btn_ex2b = document.getElementById("ex2b");
 let btn_ex3 = document.getElementById("ex3");
 let btn_ex4 = document.getElementById("ex4");
+let btn_ex5 = document.getElementById("ex5");
 let btn_ex6 = document.getElementById("ex6");
 let btn_ex7 = document.getElementById("ex7");
 let btn_ex8 = document.getElementById("ex8");
@@ -196,6 +224,7 @@ btn_ex2a.addEventListener(my_event, suite_nombre_pairs);
 btn_ex2b.addEventListener(my_event, suite_nombre_impairs);
 btn_ex3.addEventListener(my_event, permutation);
 btn_ex4.addEventListener(my_event, annee_bissextile);
+btn_ex5.addEventListener(my_event, equation_second_degre);
 btn_ex6.addEventListener(my_event, valeur_sortie);
 btn_ex7.addEventListener(my_event, valeur_sortie_avec_indication);
 btn_ex8.addEventListener(my_event, suite_de_dix_prochaine_valeur);
