@@ -21,7 +21,7 @@ function login(){
 Exercice 2.a
 @Suite numérique paire
 */
-function suite_nombre_pairs(){
+function suiteNombrePairs(){
     result_container.textContent = "0";
     let x = 0;
     do {
@@ -37,7 +37,7 @@ function suite_nombre_pairs(){
 Exercice 2.b
 @Suite numérique impaire
 */
-function suite_nombre_impairs(){
+function suiteNombreImpairs(){
     result_container.textContent = "0";
     let x = 0;
     do {
@@ -70,7 +70,7 @@ function permutation(){
 Exercice 4
 @Année bissextile
 */
-function annee_bissextile(){
+function anneeBissextile(){
     let annee = parseInt(prompt("Saisir l'année : ").trim());
     exercice_description.textContent = "Exercice 04 :: Vérification de l'année " + annee + 
     " si elle est bissextile";
@@ -86,7 +86,7 @@ function annee_bissextile(){
 Exercice 5
 @ Equation du second degré
 */
-function equation_second_degre(){
+function equationSecondDegre(){
     let a, b, c, delta, x1, x2;
     a = parseInt(prompt("Saisir la valeur de a : ").trim());
     b = parseInt(prompt("Saisir la valeur de b : ").trim());
@@ -113,7 +113,7 @@ function equation_second_degre(){
 Exercice 6
 @Valeur comprise entre 1 et 3
 */
-function valeur_sortie(){
+function valeurSortie(){
     let x = 0;
     do {
         x = parseFloat(prompt("Saisir une valeur entre 1 et 3 : ").trim());
@@ -126,7 +126,7 @@ function valeur_sortie(){
 Exercice 7
 @Valeur comprise entre 10 et 20 avec indication [Plus grand ou plus petit]
 */
-function valeur_sortie_avec_indication(){
+function valeurSortieAvecIndication(){
     let x = parseFloat(prompt("Saisir une valeur entre 10 et 20 : ").trim());
     while (x < 10 || x > 20) {
         if (x < 10) {
@@ -146,7 +146,7 @@ function valeur_sortie_avec_indication(){
 Exercice 8
 @Retour de 10 prochaine valeur
 */
-function suite_de_dix_prochaine_valeur(){
+function suiteDeDixProchainesValeur(){
     let valeur_depart = parseInt(prompt("Saisir une valeur de départ : ").trim());
     let valeur_limite = valeur_depart + 10;
     result_container.textContent = "";
@@ -165,7 +165,7 @@ function suite_de_dix_prochaine_valeur(){
  * Exercice 9
  * @ Table de multiplication
  * **/
-function table_multiplication(){
+function tableMultiplication(){
     let valeur_depart = parseInt(prompt("Saisir une valeur de départ pour la table de multiplication : ").trim());
     let msg = "";
     for (let i = 1; i <= 10; i++) {
@@ -179,7 +179,7 @@ function table_multiplication(){
  * Exercice 10
  * @ Somme des entiers
  * **/
-function somme_entiers(){
+function sommeDesEntiers(){
     let valeur_depart = 0;
     let somme = 0;
     do {
@@ -205,29 +205,3 @@ function factorielle(){
     exercice_description.textContent = "Exercice 11 :: La factorielle de " + valeur_depart;
     result_container.textContent = "La factorielle vaut : " + fact;
 }
-
-let my_event = 'click';
-let btn_ex1 = document.getElementById("ex1");
-let btn_ex2a = document.getElementById("ex2a");
-let btn_ex2b = document.getElementById("ex2b");
-let btn_ex3 = document.getElementById("ex3");
-let btn_ex4 = document.getElementById("ex4");
-let btn_ex5 = document.getElementById("ex5");
-let btn_ex6 = document.getElementById("ex6");
-let btn_ex7 = document.getElementById("ex7");
-let btn_ex8 = document.getElementById("ex8");
-let btn_ex9 = document.getElementById("ex9");
-let btn_ex10 = document.getElementById("ex10");
-let btn_ex11 = document.getElementById("ex11");
-btn_ex1.addEventListener(my_event, login);
-btn_ex2a.addEventListener(my_event, suite_nombre_pairs);
-btn_ex2b.addEventListener(my_event, suite_nombre_impairs);
-btn_ex3.addEventListener(my_event, permutation);
-btn_ex4.addEventListener(my_event, annee_bissextile);
-btn_ex5.addEventListener(my_event, equation_second_degre);
-btn_ex6.addEventListener(my_event, valeur_sortie);
-btn_ex7.addEventListener(my_event, valeur_sortie_avec_indication);
-btn_ex8.addEventListener(my_event, suite_de_dix_prochaine_valeur);
-btn_ex9.addEventListener(my_event, table_multiplication);
-btn_ex10.addEventListener(my_event, somme_entiers);
-btn_ex11.addEventListener(my_event, factorielle);
